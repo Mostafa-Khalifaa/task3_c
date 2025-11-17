@@ -1,6 +1,5 @@
-#ifndef input
-#define input
-
+#ifndef INPUT_H
+#define INPUT_H
 
 // Initialize input system (for Linux terminal settings)
 void initInput(void);
@@ -8,4 +7,7 @@ void initInput(void);
 // Restore input settings (for Linux)
 void restoreInput(void);
 
-#endif // input
+// Wait for any key press
+void waitForKey(void);
+
+#endif // INPUT_H

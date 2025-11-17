@@ -45,30 +45,42 @@ int isOccupied(int n, int targetRow, int targetCol, int upToNum) {
 
 // Convert grid position to screen coordinates and draw box
 void drawGridBox(int gridRow, int gridCol, int n, int startX, int startY, Color color) {
-    int x = startX + gridCol * (BOX_WIDTH + 1);
-    int y = startY + gridRow * (BOX_HEIGHT + 1);
+    int x = startX + gridCol * BOX_WIDTH;
+    int y = startY + gridRow * BOX_HEIGHT;
 
     setColor(color);
 
     // Top border
     moveCursor(x, y);
-    printf("+");
-    for (int i = 0; i < BOX_WIDTH - 2; i++) printf("-");
-    printf("+");
+    for (int i = 0; i < BOX_WIDTH; i++) {
+        if (i == 0 || i == BOX_WIDTH - 1) {
+            printf("+");
+        } else {
+            printf("-");
+        }
+    }
 
     // Middle rows
     for (int row = 1; row < BOX_HEIGHT - 1; row++) {
         moveCursor(x, y + row);
-        printf("|");
-        for (int i = 0; i < BOX_WIDTH - 2; i++) printf(" ");
-        printf("|");
+        for (int i = 0; i < BOX_WIDTH; i++) {
+            if (i == 0 || i == BOX_WIDTH - 1) {
+                printf("|");
+            } else {
+                printf(" ");
+            }
+        }
     }
 
     // Bottom border
     moveCursor(x, y + BOX_HEIGHT - 1);
-    printf("+");
-    for (int i = 0; i < BOX_WIDTH - 2; i++) printf("-");
-    printf("+");
+    for (int i = 0; i < BOX_WIDTH; i++) {
+        if (i == 0 || i == BOX_WIDTH - 1) {
+            printf("+");
+        } else {
+            printf("-");
+        }
+    }
 
     resetColor();
     fflush(stdout);
@@ -76,8 +88,8 @@ void drawGridBox(int gridRow, int gridCol, int n, int startX, int startY, Color 
 
 // Draw number at grid position
 void drawNumberAtPosition(int gridRow, int gridCol, int n, int num, int startX, int startY) {
-    int x = startX + gridCol * (BOX_WIDTH + 1);
-    int y = startY + gridRow * (BOX_HEIGHT + 1);
+    int x = startX + gridCol * BOX_WIDTH;
+    int y = startY + gridRow * BOX_HEIGHT;
 
     char numStr[10];
     sprintf(numStr, "%d", num);
@@ -112,15 +124,19 @@ void fillMagicSquareAnimated(int n, int startX, int startY) {
         delaySeconds(1);
 
         // Redraw box border only (not the middle where number is)
-        int x = startX + col * (BOX_WIDTH + 1);
-        int y = startY + row * (BOX_HEIGHT + 1);
+        int x = startX + col * BOX_WIDTH;
+        int y = startY + row * BOX_HEIGHT;
 
         setColor(WHITE);
         // Top border
         moveCursor(x, y);
-        printf("+");
-        for (int i = 0; i < BOX_WIDTH - 2; i++) printf("-");
-        printf("+");
+        for (int i = 0; i < BOX_WIDTH; i++) {
+            if (i == 0 || i == BOX_WIDTH - 1) {
+                printf("+");
+            } else {
+                printf("-");
+            }
+        }
 
         // Left and right borders only
         for (int r = 1; r < BOX_HEIGHT - 1; r++) {
@@ -132,9 +148,13 @@ void fillMagicSquareAnimated(int n, int startX, int startY) {
 
         // Bottom border
         moveCursor(x, y + BOX_HEIGHT - 1);
-        printf("+");
-        for (int i = 0; i < BOX_WIDTH - 2; i++) printf("-");
-        printf("+");
+        for (int i = 0; i < BOX_WIDTH; i++) {
+            if (i == 0 || i == BOX_WIDTH - 1) {
+                printf("+");
+            } else {
+                printf("-");
+            }
+        }
 
         resetColor();
         fflush(stdout);
@@ -153,8 +173,7 @@ void displayMagicSum(int n, int startY) {
 
 // Get valid odd number from user
 int getUserInput(void) {
-    int n;
-    char buffer[100];
+    int n = 0;
 
     clearScreen();
     drawText(5, 2, "=== Magic Square Generator ===", CYAN);
@@ -164,12 +183,25 @@ int getUserInput(void) {
     setColor(WHITE);
     fflush(stdout);
 
-    // Use fgets to read input properly
-    if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
-        sscanf(buffer, "%d", &n);
-    } else {
-        n = 0;
-    }
+    // Temporarily restore terminal for normal input
+#ifndef _WIN32
+    struct termios old, new;
+    tcgetattr(STDIN_FILENO, &old);
+    new = old;
+    new.c_lflag |= (ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &new);
+#endif
+
+    scanf("%d", &n);
+
+    // Clear input buffer
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+
+#ifndef _WIN32
+    // Restore non-canonical mode
+    tcsetattr(STDIN_FILENO, TCSANOW, &old);
+#endif
 
     resetColor();
     return n;
@@ -183,17 +215,19 @@ void runMagicSquare(void) {
     if (n < 3 || n > 9 || n % 2 == 0) {
         clearScreen();
         drawText(5, 5, "Invalid! Enter an odd number between 3 and 9.", RED);
-        drawText(5, 7, "Press Enter to exit...", YELLOW);
+        drawText(5, 7, "Press any key to exit...", YELLOW);
         fflush(stdout);
-        getchar();
+
+        // Wait for any key
+        waitForKey();
         return;
     }
 
     clearScreen();
 
     // Calculate centered position
-    int totalWidth = n * (BOX_WIDTH + 1) + 1;
-    int totalHeight = n * (BOX_HEIGHT + 1) + 1;
+    int totalWidth = n * BOX_WIDTH;
+    int totalHeight = n * BOX_HEIGHT;
     int startX = (80 - totalWidth) / 2;
     int startY = (24 - totalHeight) / 2;
 
@@ -209,8 +243,8 @@ void runMagicSquare(void) {
     displayMagicSum(n, startY);
 
     // Wait for exit
-    drawText(10, 23, "Press Enter to exit...", YELLOW);
+    drawText(10, 23, "Press any key to exit...", YELLOW);
     fflush(stdout);
-    getchar();
+    waitForKey();
     clearScreen();
 }

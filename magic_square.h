@@ -1,9 +1,9 @@
-#ifndef MAGIC_SQUARE_H_INCLUDED
-#define MAGIC_SQUARE_H_INCLUDED
+#ifndef MAGIC_SQUARE_H
+#define MAGIC_SQUARE_H
 
 #include "color.h"
 
-#define BOX_WIDTH 7
+#define BOX_WIDTH 6
 #define BOX_HEIGHT 3
 
 // Initialize and run magic square program
@@ -33,4 +33,4 @@ void fillMagicSquareAnimated(int n, int startX, int startY);
 // Display magic sum
 void displayMagicSum(int n, int startY);
 
-#endif // MAGIC_SQUARE_H_INCLUDED
+#endif // MAGIC_SQUARE_H

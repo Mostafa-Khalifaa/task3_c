@@ -36,3 +36,10 @@ void restoreInput(void) {
 #endif
 }
 
+void waitForKey(void) {
+#ifdef _WIN32
+    _getch();
+#else
+    getchar();
+#endif
+}
