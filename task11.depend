@@ -1,0 +1,426 @@
+# depslib dependency file v1.0
+1763140714 source:c:\users\mosta\onedrive\سطح المكتب\task11\main.c
+	<stdio.h>
+	<stdlib.h>
+	"draw.h"
+	"screen.h"
+
+1763202922 
+
+1763138630 c:\users\mosta\onedrive\سطح المكتب\task11\draw.h
+	"color.h"
+
+1763138630 c:\users\mosta\onedrive\سطح المكتب\task11\color.h
+
+1763138630 c:\users\mosta\onedrive\سطح المكتب\task11\screen.h
+
+1763138630 source:c:\users\mosta\onedrive\سطح المكتب\task11\color.h
+
+1763138630 source:c:\users\mosta\onedrive\سطح المكتب\task11\cursor.h
+
+1763138630 source:c:\users\mosta\onedrive\سطح المكتب\task11\color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763139348 c:\users\mosta\onedrive\سطح المكتب\task11\platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763138630 source:c:\users\mosta\onedrive\سطح المكتب\task11\cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763138630 c:\users\mosta\onedrive\سطح المكتب\task11\cursor.h
+
+1763138630 source:c:\users\mosta\onedrive\سطح المكتب\task11\draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763139093 source:c:\users\mosta\onedrive\سطح المكتب\task11\screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763102630 source:/home/mostafa/Desktop/task11/color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Desktop/task11/color.h
+
+1763103348 /home/mostafa/Desktop/task11/platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763102630 source:/home/mostafa/Desktop/task11/cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Desktop/task11/cursor.h
+
+1763102630 source:/home/mostafa/Desktop/task11/draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Desktop/task11/draw.h
+	"color.h"
+
+1763102630 /home/mostafa/Desktop/task11/screen.h
+
+1763104714 source:/home/mostafa/Desktop/task11/main.c
+	<stdio.h>
+	<stdlib.h>
+	"draw.h"
+	"screen.h"
+
+1763103092 source:/home/mostafa/Desktop/task11/screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763102630 source:/home/mostafa/Downloads/task2/color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2/color.h
+
+1763103348 /home/mostafa/Downloads/task2/platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763102630 source:/home/mostafa/Downloads/task2/cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2/cursor.h
+
+1763102630 source:/home/mostafa/Downloads/task2/draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2/draw.h
+	"color.h"
+
+1763102630 /home/mostafa/Downloads/task2/screen.h
+
+1763165305 source:/home/mostafa/Downloads/task2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"draw.h"
+	"screen.h"
+
+1763103092 source:/home/mostafa/Downloads/task2/screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763165305 source:/home/mostafa/Downloads/task2/input.c
+	"input.h"
+	"platform.h"
+	<stdio.h>
+	<termios.h>
+	<unistd.h>
+	<conio.h>
+
+1763165305 /home/mostafa/Downloads/task2/input.h
+
+1763165305 /home/mostafa/Downloads/task2/menu.h
+	"color.h"
+
+1763165492 source:/home/mostafa/Downloads/task2/menu.c
+	"menu.h"
+	"screen.h"
+	"draw.h"
+	"input.h"
+	"cursor.h"
+	<stdio.h>
+	<string.h>
+
+1763202922 source:c:\users\mosta\onedrive\سطح المكتب\task2_c\color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763202922 c:\users\mosta\onedrive\سطح المكتب\task2_c\color.h
+
+1763202922 c:\users\mosta\onedrive\سطح المكتب\task2_c\platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763202922 source:c:\users\mosta\onedrive\سطح المكتب\task2_c\cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763202922 c:\users\mosta\onedrive\سطح المكتب\task2_c\cursor.h
+
+1763202922 source:c:\users\mosta\onedrive\سطح المكتب\task2_c\draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763202922 c:\users\mosta\onedrive\سطح المكتب\task2_c\draw.h
+	"color.h"
+
+1763202922 c:\users\mosta\onedrive\سطح المكتب\task2_c\screen.h
+
+1763203274 source:c:\users\mosta\onedrive\سطح المكتب\task2_c\input.c
+	"input.h"
+	"platform.h"
+	<stdio.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+
+1763202922 c:\users\mosta\onedrive\سطح المكتب\task2_c\input.h
+
+1763203391 source:c:\users\mosta\onedrive\سطح المكتب\task2_c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"screen.h"
+	"input.h"
+	"menu.h"
+
+1763202922 c:\users\mosta\onedrive\سطح المكتب\task2_c\menu.h
+	"color.h"
+
+1763202922 source:c:\users\mosta\onedrive\سطح المكتب\task2_c\menu.c
+	"menu.h"
+	"screen.h"
+	"draw.h"
+	"input.h"
+	"cursor.h"
+	<stdio.h>
+	<string.h>
+
+1763202922 source:c:\users\mosta\onedrive\سطح المكتب\task2_c\screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763102630 source:/home/mostafa/Downloads/task2/color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2/color.h
+
+1763103348 /home/mostafa/Downloads/task2/platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763102630 source:/home/mostafa/Downloads/task2/cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2/cursor.h
+
+1763102630 source:/home/mostafa/Downloads/task2/draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2/draw.h
+	"color.h"
+
+1763102630 /home/mostafa/Downloads/task2/screen.h
+
+1763277292 source:/home/mostafa/Downloads/task2/input.c
+	"input.h"
+	"platform.h"
+	<stdio.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+
+1763165305 /home/mostafa/Downloads/task2/input.h
+
+1763277312 source:/home/mostafa/Downloads/task2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"screen.h"
+	"input.h"
+	"menu.h"
+
+1763165305 /home/mostafa/Downloads/task2/menu.h
+	"color.h"
+
+1763165492 source:/home/mostafa/Downloads/task2/menu.c
+	"menu.h"
+	"screen.h"
+	"draw.h"
+	"input.h"
+	"cursor.h"
+	<stdio.h>
+	<string.h>
+
+1763103092 source:/home/mostafa/Downloads/task2/screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763324166 source:/home/mostafa/Downloads/task2_c/color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2_c/color.h
+
+1763103348 /home/mostafa/Downloads/task2_c/platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763324378 source:/home/mostafa/Downloads/task2_c/cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2_c/cursor.h
+
+1763324476 source:/home/mostafa/Downloads/task2_c/draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Downloads/task2_c/draw.h
+	"color.h"
+
+1763102630 /home/mostafa/Downloads/task2_c/screen.h
+
+1763382296 source:/home/mostafa/Downloads/task2_c/input.c
+	"input.h"
+	"platform.h"
+	<stdio.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+
+1763165305 /home/mostafa/Downloads/task2_c/menu.h
+	"color.h"
+
+1763293645 /home/mostafa/Downloads/task2_c/input.h
+
+1763277312 source:/home/mostafa/Downloads/task2_c/main.c
+	<stdio.h>
+	<stdlib.h>
+	"screen.h"
+	"input.h"
+	"menu.h"
+
+1763103092 source:/home/mostafa/Downloads/task2_c/screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763381780 source:/home/mostafa/Downloads/task2_c/menu.c
+	"menu.h"
+	"screen.h"
+	"draw.h"
+	"input.h"
+	"cursor.h"
+	<stdio.h>
+	<string.h>
+
+1763324166 source:/home/mostafa/Desktop/task3_c/color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Desktop/task3_c/color.h
+
+1763103348 /home/mostafa/Desktop/task3_c/platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763324378 source:/home/mostafa/Desktop/task3_c/cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Desktop/task3_c/cursor.h
+
+1763403933 source:/home/mostafa/Desktop/task3_c/draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763399752 /home/mostafa/Desktop/task3_c/draw.h
+	"color.h"
+
+1763102630 /home/mostafa/Desktop/task3_c/screen.h
+
+1763399476 source:/home/mostafa/Desktop/task3_c/main.c
+	<stdio.h>
+	<stdlib.h>
+	"screen.h"
+	"input.h"
+	"magic_square.h"
+
+1763403682 /home/mostafa/Desktop/task3_c/input.h
+
+1763404179 /home/mostafa/Desktop/task3_c/magic_square.h
+	"color.h"
+
+1763103092 source:/home/mostafa/Desktop/task3_c/screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763403529 source:/home/mostafa/Desktop/task3_c/input.c
+	"input.h"
+	"platform.h"
+	<stdio.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+
+1763399751 source:/home/mostafa/Desktop/task3_c/magic_square.c
+	"magic_square.h"
+	"screen.h"
+	"draw.h"
+	"cursor.h"
+	"input.h"
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+
