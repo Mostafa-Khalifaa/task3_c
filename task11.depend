@@ -5,7 +5,7 @@
 	"draw.h"
 	"screen.h"
 
-1763202922 
+1763416132 
 
 1763138630 c:\users\mosta\onedrive\سطح المكتب\task11\draw.h
 	"color.h"
@@ -365,6 +365,8 @@
 	"input.h"
 	"magic_square.h"
 
+1763399033 are.h"
+
 1763403682 /home/mostafa/Desktop/task3_c/input.h
 
 1763404179 /home/mostafa/Desktop/task3_c/magic_square.h
@@ -460,6 +462,75 @@
 	"magic_square.h"
 
 1763399033 source:c:\users\mosta\onedrive\سطح المكتب\task3_c\screen.c
+	"screen.h"
+	"platform.h"
+	<stdio.h>
+	<stdlib.h>
+
+1763324166 source:/home/mostafa/Desktop/task3_c/color.c
+	"color.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Desktop/task3_c/color.h
+
+1763103348 /home/mostafa/Desktop/task3_c/platform.h
+	<windows.h>
+	<unistd.h>
+	<stdio.h>
+
+1763324378 source:/home/mostafa/Desktop/task3_c/cursor.c
+	"cursor.h"
+	"platform.h"
+	<stdio.h>
+
+1763102630 /home/mostafa/Desktop/task3_c/cursor.h
+
+1763403933 source:/home/mostafa/Desktop/task3_c/draw.c
+	"draw.h"
+	"cursor.h"
+	"color.h"
+	"screen.h"
+	<stdio.h>
+
+1763399752 /home/mostafa/Desktop/task3_c/draw.h
+	"color.h"
+
+1763102630 /home/mostafa/Desktop/task3_c/screen.h
+
+1763456443 source:/home/mostafa/Desktop/task3_c/input.c
+	"input.h"
+	"platform.h"
+	<stdio.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+
+1763456443 /home/mostafa/Desktop/task3_c/input.h
+
+1763458308 source:/home/mostafa/Desktop/task3_c/magic_square.c
+	"magic_square.h"
+	"screen.h"
+	"draw.h"
+	"cursor.h"
+	"input.h"
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+
+1763458308 /home/mostafa/Desktop/task3_c/magic_square.h
+	"color.h"
+
+1763399476 source:/home/mostafa/Desktop/task3_c/main.c
+	<stdio.h>
+	<stdlib.h>
+	"screen.h"
+	"input.h"
+	"magic_square.h"
+
+1763103092 source:/home/mostafa/Desktop/task3_c/screen.c
 	"screen.h"
 	"platform.h"
 	<stdio.h>

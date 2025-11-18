@@ -19,13 +19,9 @@ void calculatePosition(int n, int num, int *row, int *col);
 int isOccupied(int n, int row, int col, int currentNum);
 
 // Draw single box at grid position
-void drawGridBox(int gridRow, int gridCol, int n, int startX, int startY, Color color);
-
 // Draw number inside box at grid position
 void drawNumberAtPosition(int gridRow, int gridCol, int n, int num, int startX, int startY);
 
-// Draw complete empty grid
-void drawEmptyGrid(int n, int startX, int startY);
 
 // Fill magic square with numbers (animated)
 void fillMagicSquareAnimated(int n, int startX, int startY);

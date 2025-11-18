@@ -43,48 +43,6 @@ int isOccupied(int n, int targetRow, int targetCol, int upToNum) {
     return 0;
 }
 
-// Convert grid position to screen coordinates and draw box
-void drawGridBox(int gridRow, int gridCol, int n, int startX, int startY, Color color) {
-    int x = startX + gridCol * BOX_WIDTH;
-    int y = startY + gridRow * BOX_HEIGHT;
-
-    setColor(color);
-
-    // Top border
-    moveCursor(x, y);
-    for (int i = 0; i < BOX_WIDTH; i++) {
-        if (i == 0 || i == BOX_WIDTH - 1) {
-            printf("+");
-        } else {
-            printf("-");
-        }
-    }
-
-    // Middle rows
-    for (int row = 1; row < BOX_HEIGHT - 1; row++) {
-        moveCursor(x, y + row);
-        for (int i = 0; i < BOX_WIDTH; i++) {
-            if (i == 0 || i == BOX_WIDTH - 1) {
-                printf("|");
-            } else {
-                printf(" ");
-            }
-        }
-    }
-
-    // Bottom border
-    moveCursor(x, y + BOX_HEIGHT - 1);
-    for (int i = 0; i < BOX_WIDTH; i++) {
-        if (i == 0 || i == BOX_WIDTH - 1) {
-            printf("+");
-        } else {
-            printf("-");
-        }
-    }
-
-    resetColor();
-    fflush(stdout);
-}
 
 // Draw number at grid position
 void drawNumberAtPosition(int gridRow, int gridCol, int n, int num, int startX, int startY) {
@@ -100,64 +58,17 @@ void drawNumberAtPosition(int gridRow, int gridCol, int n, int num, int startX, 
     drawText(centerX, centerY, numStr, YELLOW);
 }
 
-// Draw complete empty grid
-void drawEmptyGrid(int n, int startX, int startY) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            drawGridBox(i, j, n, startX, startY, WHITE);
-        }
-    }
-}
 
-// Fill magic square with animation
+// Fill magic square with animation (numbers only)
 void fillMagicSquareAnimated(int n, int startX, int startY) {
     for (int num = 1; num <= n * n; num++) {
         int row, col;
         calculatePosition(n, num, &row, &col);
 
-        // Highlight box
-        drawGridBox(row, col, n, startX, startY, CYAN);
-        delaySeconds(1);
-
-        // Draw number (this stays visible)
+        // Draw the number directly
         drawNumberAtPosition(row, col, n, num, startX, startY);
+
         delaySeconds(1);
-
-        // Redraw box border only (not the middle where number is)
-        int x = startX + col * BOX_WIDTH;
-        int y = startY + row * BOX_HEIGHT;
-
-        setColor(WHITE);
-        // Top border
-        moveCursor(x, y);
-        for (int i = 0; i < BOX_WIDTH; i++) {
-            if (i == 0 || i == BOX_WIDTH - 1) {
-                printf("+");
-            } else {
-                printf("-");
-            }
-        }
-
-        // Left and right borders only
-        for (int r = 1; r < BOX_HEIGHT - 1; r++) {
-            moveCursor(x, y + r);
-            printf("|");
-            moveCursor(x + BOX_WIDTH - 1, y + r);
-            printf("|");
-        }
-
-        // Bottom border
-        moveCursor(x, y + BOX_HEIGHT - 1);
-        for (int i = 0; i < BOX_WIDTH; i++) {
-            if (i == 0 || i == BOX_WIDTH - 1) {
-                printf("+");
-            } else {
-                printf("-");
-            }
-        }
-
-        resetColor();
-        fflush(stdout);
     }
 }
 
@@ -225,7 +136,7 @@ void runMagicSquare(void) {
 
     clearScreen();
 
-    // Calculate centered position
+    // Calculate centered position (smaller spacing without boxes)
     int totalWidth = n * BOX_WIDTH;
     int totalHeight = n * BOX_HEIGHT;
     int startX = (80 - totalWidth) / 2;
@@ -236,9 +147,7 @@ void runMagicSquare(void) {
     sprintf(title, "Magic Square %dx%d", n, n);
     drawText((80 - strlen(title)) / 2, 2, title, CYAN);
 
-    // Draw and fill
-    drawEmptyGrid(n, startX, startY);
-    delaySeconds(1);
+    // Fill magic square with numbers only
     fillMagicSquareAnimated(n, startX, startY);
     displayMagicSum(n, startY);
 
